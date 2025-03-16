@@ -4,14 +4,14 @@ package AED_07_Laboratorio_1.Ejercicios.Ejercicio_Final;
 
 
 public class Verificador {
-    
+    //Metodo que evalua si dos coordenadas son iguales
     static boolean iguales(Coordenada c1,Coordenada c2){
         if(c1.getX()==c2.getX() && c1.getY()==c2.getY()){
             return true;
         }
         return false;
     }
-    
+    //Metodo que evalua si dos rectangulo se encuentran sobrepuestos
     static boolean esSobrePos(Rectangulo r1,Rectangulo r2){
         Rectangulo rA;
         Rectangulo rB;
@@ -56,7 +56,7 @@ public class Verificador {
         return true;
     }
 
-    
+    //Metodo que evalua si dos rectangulos se encuentran juntos
     static boolean esJunto(Rectangulo r1,Rectangulo r2){
         boolean izquierdaDerecha= (r1.getXMax()==r2.getXMin() || r1.getXMin()==r2.getXMax()) &&
                                     (r1.getYMax()<=r2.getYMax() && r1.getYMin()<=r2.getYMin());
@@ -67,8 +67,8 @@ public class Verificador {
         return (izquierdaDerecha || arribaAbajo);
         
     }
-    
-    static boolean esDisjunto(Rectangulo r1,Rectangulo r2){
+    //Metodo que se usa despues de haber llamado a los dos anteriores metodos
+    static boolean esDisjunto(){
         return true;
     }
 }

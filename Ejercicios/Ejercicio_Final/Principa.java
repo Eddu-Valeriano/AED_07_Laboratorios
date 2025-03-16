@@ -7,9 +7,10 @@ public class Principa {
     public static void main(String[]args){
         
         Scanner scan= new Scanner(System.in);
-        int n=1;
-        ContainerRect contenedor=new ContainerRect(n);
+        int n=1;//Cantidad de rectangulos a ingresar
+        ContainerRect contenedor=new ContainerRect(n);//Creacion de la clase donde se va almacenar los objetos de la clas Rectangulo
         for(int i=0;i<n;i++){
+            //Entrada por teclado de las coordenadas del rectangulo
             System.out.println("Ingrese la primera esquina del rectangulo N"+i);
             double x1=scan.nextDouble();
             double y1=scan.nextDouble();
@@ -23,7 +24,7 @@ public class Principa {
             Rectangulo r1=new Rectangulo(c1, c2);
             contenedor.addRectangulo(r1);
         }
-        System.out.println(contenedor);
+        System.out.println(contenedor);//Muestra del contenido de la clase Container antes de finalizar el main
         
 
         
